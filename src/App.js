@@ -1,5 +1,6 @@
 import React from "react";
-
+import "./index.css";
+import PlayNumber from "./components/Number";
 function App() {
   const stars = utils.random(1, 9);
   return (
@@ -17,7 +18,12 @@ function App() {
         </div>
         <div className="right">
           {utils.range(1, 9).map((number) => (
-            <button key={number} className="number">
+            // <PlayNumber key={number} number={number} />
+            <button
+              key={number}
+              onClick={() => console.log(number)}
+              className="number"
+            >
               {number}
             </button>
           ))}
